@@ -15,7 +15,7 @@ class RepositoriesController < ApplicationController
              if @resp.success?
                @venues = body["items"]
              else
-               @error = body["meta"]["errorDetail"]
+               @error = body["message"]
              end
 
            rescue Faraday::ConnectionFailed
